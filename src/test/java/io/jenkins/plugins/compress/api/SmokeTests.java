@@ -1,4 +1,4 @@
-package api;
+package io.jenkins.plugins.compress.api;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
