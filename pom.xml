@@ -11,7 +11,7 @@
 
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>commons-compress-api</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>${revision}-${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Commons Compress API</name>
@@ -33,8 +33,8 @@
   </scm>
 
   <properties>
-    <revision>1.28.0-4</revision>
-    <changelist>-SNAPSHOT</changelist>
+    <revision>1.28.0</revision>
+    <changelist>999999-SNAPSHOT</changelist>
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
     <jenkins.baseline>2.492</jenkins.baseline>
     <jenkins.version>${jenkins.baseline}.3</jenkins.version>
@@ -43,6 +43,7 @@
     <hpi.bundledArtifacts>commons-compress,dec,xz,zstd-jni</hpi.bundledArtifacts>
     <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
     <ban-junit4-imports.skip>true</ban-junit4-imports.skip>
+    <commons-compress.version>${revision}</commons-compress.version>
   </properties>
 
   <dependencyManagement>
@@ -70,7 +71,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-compress</artifactId>
-      <version>1.28.0</version>
+      <version>${commons-compress.version}</version>
       <exclusions>
         <!-- Provided by Jenkins core -->
         <exclusion>
